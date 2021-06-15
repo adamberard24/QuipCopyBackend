@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  resources :votes
-  resources :answers
-  resources :prompts
-  resources :rounds
-  resources :games
-  resources :join_groups
-  resources :groups
-resources :users, only: [:create]
-post "/login", to: "users#login"
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :games, only: [:index, :create]
+  resources :players, only: [:index, :create]
+  resources :answers, only: [:index, :create]
+  resources :votes, only: [:index, :create]
+
+  get '/games/quick_join', to: 'games#quick_join'
+  get '/games/:id/players', to: 'games#players'
+
+  mount ActionCable.server => '/cable'
 end
+
+
+  # post '/login", to: "users#login'

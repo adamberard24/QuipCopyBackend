@@ -1,6 +1,4 @@
-Group.destroy_all
-User.destroy_all
-JoinGroup.destroy_all
-Game.destroy_all
+require_relative "prompts_data"
 
-G1 = Group.create(name: "fun boys")
+PromptsDB.data.each {|p| Prompt.find_or_create_by!(question: p[:prompt])}
+# Game.create(room_code: Game.generate_room_code, round_number: 0)
