@@ -3,4 +3,3 @@ class AnswersChannel < ApplicationCable::Channel
     stream_from 'answers'
   end
 end
-

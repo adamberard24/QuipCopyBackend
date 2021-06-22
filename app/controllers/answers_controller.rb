@@ -1,4 +1,4 @@
-equire_relative './autofill_answers.rb'
+require_relative './autofill_answers.rb'
 
 class AnswersController < ApplicationController
   def index

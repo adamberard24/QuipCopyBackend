@@ -35,4 +35,3 @@ module Spitwit
     config.api_only = true
   end
 end
-

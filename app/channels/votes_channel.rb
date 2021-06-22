@@ -3,4 +3,3 @@ class VotesChannel < ApplicationCable::Channel
     stream_from 'votes'
   end
 end
-

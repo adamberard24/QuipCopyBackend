@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :join_groups
+  resources :groups
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :games, only: [:index, :create]
   resources :players, only: [:index, :create]
@@ -11,5 +13,3 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 end
 
-
-  # post '/login", to: "users#login'

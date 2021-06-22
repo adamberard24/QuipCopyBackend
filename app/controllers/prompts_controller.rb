@@ -1,7 +1,6 @@
 class PromptsController < ApplicationController
-    def index
-
+  def index
     @prompt = Prompt.all
     render json: @prompt
-    end
+  end
 end

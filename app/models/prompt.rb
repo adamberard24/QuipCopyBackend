@@ -1,3 +1,3 @@
 class Prompt < ApplicationRecord
-    has_one :round
+  has_one :round
 end
